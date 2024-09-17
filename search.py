@@ -2,7 +2,11 @@ import json
 
 def search_json(json_data, search_string):
     results = []
-    # Place your search code here
-    # you will have to loop through the json_data file you created earlier
-    # finally you can store the match in the result list and return it
+    
+    for user in json_data:
+        if search_string in user: 
+            results.append(user[search_string])
+            #print(user["User"], " contains ", user[search_string])
+
+
     return results
